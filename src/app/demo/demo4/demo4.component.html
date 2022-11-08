@@ -1,0 +1,8 @@
+<h2>Input / Output (Transmition de donnée entre composants )</h2>
+<div class="chapter">
+    <div class="parent">
+        <h3>je suis le composant parent et je m appel {{fname}} <input type="text" [(ngModel)]="lname"></h3>
+        <app-demo4child [nomParent]="lname" (faireQuelqueChose)="repondreBesoinEnfant($event)"></app-demo4child>
+        <h3>{{message}}</h3>
+    </div>
+</div>

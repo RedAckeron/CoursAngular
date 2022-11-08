@@ -1,0 +1,6 @@
+<div *ngFor="let item of listeCourse;let i =index">
+    <div> {{item.name+' : '+item.qt}} 
+        <button (click)="ajouterItem(i)">+</button>
+        <button (click)="effacerItem(i)">-</button>
+    </div>
+</div>

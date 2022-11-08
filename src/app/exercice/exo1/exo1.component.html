@@ -1,0 +1,10 @@
+<h1>Chronometre</h1>
+<p>Timer : {{maVariable | chrono}}</p>
+<button [disabled]="pause" (click)="start_chrono()">Start</button>
+
+<!-- <button (click)="start_chrono()">Start</button> -->
+
+<button [disabled]="!pause" (click)="stop_chrono()">Pause</button>
+
+<button [disabled]="!pause" (click)="reset_chrono()">Stop</button>
+

@@ -1,0 +1,7 @@
+<div class="main">Shoping List</div>
+
+<input type="text" [(ngModel)]="nameItem">
+
+<button (click)="addItem()">Ajouter</button>
+
+<app-child [listeCourse]="listeCourse" (effaceritem)="removeQt($event)" (ajouteritem)="addQt($event)"></app-child>

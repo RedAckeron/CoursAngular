@@ -1,0 +1,33 @@
+<h2>Les pipes  (Servent a modifier le visuel des variables en vue)</h2>
+<div class = "chapter">
+    <h3>Les Pipes principaux</h3>
+    <h4>Sur les chaines</h4>
+    <div>Ma chaine sans formatage : {{machaine}} (Uppercase)</div>
+    <div>Ma chaine en majuscule: {{machaine | uppercase}} (Uppercase)</div>
+    <div>Ma chaine en minuiscule : {{machaine | lowercase}} (lowercase)</div>
+    <div>Ma chaine avec majuscule a chaque mot : {{machaine | titlecase}} (titlecase)</div>
+</div>
+
+<div class = "chapter">
+    <h4>Sur les nombres</h4>
+    <div>Mon nombre sans formatage : {{monNombre | number : '1.0-2'}}</div>
+</div>
+
+<div class = "chapter">
+    <h4>Sur les dates</h4>
+    <div>Ma date sans formatage {{maDate}}</div>
+    <div>Ma date avec formatage {{maDate | date : 'dd/MM/yyyy'}}</div>
+</div>
+
+<div class = "chapter">
+    <h4>Les customes pipes</h4>
+
+<div>temperature sans formatage {{maTemperature}}°C</div>
+<div>temperature en celsius {{maTemperature | toFahrenheit}}°F</div>
+<div>temperature en fahrenheit {{maTemperature | convertTemp : 'f'}}°F</div>
+<div>temperature en celsius {{maTemperature | convertTemp : 'c'}}°F</div>
+
+
+
+    
+</div>

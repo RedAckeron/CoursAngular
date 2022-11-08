@@ -1,0 +1,30 @@
+<div class="chapter">
+<h3>Property binding</h3>
+<h4>One Way binding</h4>
+<div>
+Bonjour et bienvenue {{firstName}} ! 😃😁
+</div>
+<h4>Two Way binding</h4>
+<div>
+
+</div>
+<input [(ngModel)]="firstName" type="text">
+</div>
+
+<div class="chapter">
+    
+<h3>Event Binding</h3>
+<p>{{hello}}</p>
+<button (click)="sayHello('fr')" >Fr</button>
+<button (click)="sayHello('it')" >It</button>
+<button (click)="sayHello('en')" >En</button>
+<button (click)="sayHello('ma')" >Ma</button>
+<button (click)="sayHello('')" >Other</button>
+</div>
+
+<div class="chapter">
+    <h3>Attribute Binding</h3>
+    <div id="{{monId}}">{{monId}}</div>
+    <input type="text" placeholder="{{monPlaceHolder}}">
+    <button [disabled]="unClickable">Essaye de cliquer 😂</button>
+</div>

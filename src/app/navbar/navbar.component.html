@@ -1,0 +1,12 @@
+<nav>
+    <ul class="main-menu">
+        <li *ngFor="let parent of menu;let i = index">
+            <a [ngClass]="{isActive: parent.isVisible}" (click)="toggleMenu(i)" [routerLink]="parent.url">{{parent.title}}</a>   
+            <div class="secondary-menu" *ngIf="parent.isVisible">
+                <li *ngFor="let enfant of parent.children">
+                    <a routerLink={{enfant.url}}>{{enfant.title}}</a>
+                </li>
+            </div>
+        </li>
+    </ul>
+</nav>

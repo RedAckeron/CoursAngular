@@ -1,0 +1,72 @@
+
+<h2>Les Directives</h2>
+<div>
+    <h3>Les component directives</h3>
+    <div class="chapter">
+        <h4>La directive ngmodel</h4>
+        <div>deja vu precedement , elle permet de fgaire une binding two way</div>
+        <input type="text" [(ngModel)]="favoriteFood">
+
+        <h4>La directive ngstyle</h4>
+        <div [ngStyle]="{color:rage}">Je suis vert de rage</div>
+
+        <h4>La directive ngClass</h4>
+        <div [ngClass]="{big:isBig,bold:isBold,italic:isItalic}">Bonjour et bienvenue !</div>
+        <button (click)="switchGros()">switch Gros</button>
+        <button (click)="switchGras()">Switch Gras</button>
+        <button (click)="switchItalic()">Switch Italic</button>
+    </div>
+
+    <div class="chapter">
+        <h3>Les structural directives</h3>
+          <div>
+            <h4>Le NgIf</h4>
+                <div>Sert a afficher contextuellement un bloc html</div>
+                <div>Bonjour je suis <span *ngIf="isMale">un homme</span><span *ngIf="!isMale">une femme</span></div>
+                <div>
+                    <button (click)="switchGender('Male')">Homme 🧑</button>
+                    <button (click)="switchGender('femme')">Femme 👱‍♀️</button>
+                </div>
+          </div>
+
+          <div>
+            <h4>Le NgSwitch</h4>
+            <input type="text" [(ngModel)]="weekday">
+
+           <div [ngSwitch]="(weekday).toLowerCase()">
+                <div *ngSwitchCase="'lundi'">Aujourdhui nous sommes lundi, pire jours de la semaine 🌩</div>
+                <div *ngSwitchCase="'mardi'">Aujourdhui nous sommes mardi, c est macaroni 🍽</div>
+                <div *ngSwitchCase="'mercredi'">Aujourdhui nous sommes mercredi, C est un tit jours ⚽</div>
+                <div *ngSwitchCase="'jeudi'">Aujourdhui nous sommes jeudi, c est la greve 🏳‍🌈</div>
+                <div *ngSwitchCase="'vendredi'">Aujourdhui nous sommes vendredi, c est le week end 🏖 </div>
+                <div *ngSwitchCase="'samedi'">Aujourdhui nous sommes samedi, On sort en boite 🎹</div>
+                <div *ngSwitchCase="'dimanche'">Aujourdhui nous sommes dimanche,diner en famille 🥧👨‍🦳👩‍🦳</div>
+          </div>
+          
+          <div>
+            <h4>Le NgFor</h4>
+                <div>
+                    <h3>Version Simple</h3>
+                        <li *ngFor="let item of listeCourse; let i = index">
+                            {{i}} - {{item}}
+                        </li>
+                </div>
+            <div>
+                <h3>Version plus complexe avec des objets</h3>
+                <div class ="cards">
+                    <div *ngFor="let formateur of formateurs; let i = index">
+                        <div class="card" [ngClass]="{blueCard:formateur.gender=='m',pinkCard:formateur.gender=='f'}">
+                            <img [src]="formateur.avatar" [alt]="formateur.firstname">
+                            {{formateur.firstname}} {{formateur.lastname}} {{formateur.birthdate | date}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="chapter">
+        <h3>Les customs directives</h3>
+        <div>Lorem ipsum dolor sit amet consectetur <span appHighlight>adipisicing</span> elit. Velit, explicabo fuga incidunt accusantium reiciendis quam iure distinctio iste quis corporis itaque deserunt eos cum accusamus blanditiis quasi voluptas? Assumenda, saepe?</div>
+    </div>
+</div>

@@ -18,7 +18,9 @@ export class NavbarComponent implements OnInit {
       {title:"Binding",url:"/demo/demo1"},
       {title:"Pipes",url:"/demo/demo2"},
       {title:"Directives",url:"/demo/demo3"},
-      {title:"Inputs",url:"/demo/demo4"}]},
+      {title:"Inputs",url:"/demo/demo4"},
+      {title:"Services",url:"/demo/demo5"}]},
+      
       {
       title:"Exercice",url:"/exercice/exo1",isVisible:false,children:[
       {title:"Chronometre",url:"/exercice/exo1"},
